@@ -1,0 +1,170 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    /*font-family: 'Red Hat Display', sans-serif;*/
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    background-color: darkgray;
+    flex-basis: auto;
+    flex-grow: 0;
+}
+
+main {
+    background-color: lightgray;
+    flex: 1;
+    /*position: relative;*/
+}
+
+.book-list {
+    background-color: gray;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,20%));
+    /*align-content:center;*/
+    justify-content: center;
+    gap: 1rem 2rem;
+}
+
+.book {
+    padding: 0rem;
+    padding-bottom: 0;
+    background-color: lightgray;
+    position: relative;
+    border-radius: 30px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-modify {
+    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    font-size: 1.2rem;
+    background-color: black;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: white;
+}
+
+.book-details {
+    align-content: center;
+    flex:1;
+    background-color: white;
+}
+
+.book-title {
+}
+.book-author {
+}
+.book-pages{
+}
+
+.book-delete, .book-edit {
+    padding: 0.7rem;
+    background-color: black;
+    color: white;
+    flex: 1;
+    border-bottom-right-radius: 30px;
+}
+
+.book-status {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.book-edit:hover, .book-delete:hover {
+    background-color:yellow;
+}
+
+.book-read {
+    margin-left: 1rem;
+    transform: scale(1.5);
+    accent-color: black;
+}
+
+
+
+button#add-book {
+    transform: scale(0.7);
+    transition-duration: 0.5s;
+    content: "+";
+    font-size: 4rem;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    padding: 1rem;
+    background-color: rgb(135, 206, 235);
+    width: 100px;
+    height: 100px;
+    position:fixed;
+    bottom: 30px;
+    left:80%;
+}
+
+button#add-book:hover {
+    transform: scale(1) rotate(90deg) ;
+    cursor: pointer;
+    background-color: rgba(135, 206, 235, 0.5);
+  }
+
+.add-button:hover .plus {
+    transform: rotate(90deg) scale(1.1);
+    color: rgb(99, 155, 133);
+}
+
+
+
+form {
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    /*width: 50%;*/
+    margin-left: auto;
+    margin-right:auto;
+    align-items: end;
+    gap: 0.5rem;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    border-radius: 10px;
+}
+
+.form-container {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: lightblue;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+    /*justify-items: center;*/
+    align-items: center;
+    /*transition: all 1.5s ease-in-out;*/
+}
+
+
+
+
+footer {
+    background-color: darkgray;
+    flex-basis: auto;
+    flex-grow: 0;
+}
